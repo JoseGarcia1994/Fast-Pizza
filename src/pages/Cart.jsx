@@ -24,9 +24,7 @@ const fakeCart = [
   },
 ];
 
-function Cart() {
-  const cart = fakeCart;
-
+const Cart = () => {
   return (
     <div>
       <Link to="/menu">&larr; Back to menu</Link>
@@ -39,6 +37,6 @@ function Cart() {
       </div>
     </div>
   );
-}
+};
 
 export default Cart;

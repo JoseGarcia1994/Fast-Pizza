@@ -30,10 +30,9 @@ const fakeCart = [
   },
 ];
 
-function CreateOrder() {
+const CreateOrder = () => {
   // const [withPriority, setWithPriority] = useState(false);
   const cart = fakeCart;
-
   return (
     <div>
       <h2>Ready to order? Let's go!</h2>
@@ -63,8 +62,8 @@ function CreateOrder() {
             type="checkbox"
             name="priority"
             id="priority"
-            // value={withPriority}
-            // onChange={(e) => setWithPriority(e.target.checked)}
+          // value={withPriority}
+          // onChange={(e) => setWithPriority(e.target.checked)}
           />
           <label htmlFor="priority">Want to yo give your order priority?</label>
         </div>
@@ -75,6 +74,6 @@ function CreateOrder() {
       </form>
     </div>
   );
-}
+};
 
 export default CreateOrder;
