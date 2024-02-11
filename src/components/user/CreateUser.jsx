@@ -1,11 +1,22 @@
 import { useState } from 'react';
 import Button from '../Button.jsx';
+import { updateName } from '../../store/slices/user.slice.js';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const CreateUser = () => {
   const [username, setUsername] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    // if no username then don't update username
+    if(!username) return
+    
+    dispatch(updateName(username));
+    navigate('/menu');
   }
 
   return (
