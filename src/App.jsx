@@ -7,6 +7,7 @@ import Menu, {loader as menuLoader} from './pages/Menu.jsx';
 import Cart from "./pages/Cart.jsx";
 import CreateOrder, {action as createOrderAction} from './pages/CreateOrder.jsx';
 import Order, {loader as orderLoader} from "./pages/Order.jsx";
+import {action as updateOrderAction} from './components/order/UpdateOrder.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
         path: '/order/:orderId', 
         element: <Order />, 
         loader: orderLoader, 
-        errorElement: <Error />
+        errorElement: <Error />,
+        action: updateOrderAction
       }
     ]
   },
